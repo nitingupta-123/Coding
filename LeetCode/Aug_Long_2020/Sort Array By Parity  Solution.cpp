@@ -8,7 +8,7 @@ public:
         }
         int even=0,odd=A.size()-1;
         
-        while(even<odd&&even<A.size()&&odd>=0)
+        while(even<odd)
         {
             while(even<odd && A[even]%2!=1) even++;
             
