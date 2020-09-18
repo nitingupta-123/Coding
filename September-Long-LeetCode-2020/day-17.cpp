@@ -1,6 +1,7 @@
 // problem-link : https://leetcode.com/explore/challenge/card/september-leetcoding-challenge/556/week-3-september-15th-september-21st/3463/
 class Solution {
 public:
+    // getdir is to get the current direction when the robot moves left or right.
     void getDir(char &dir,char s)
     {
         if(dir=='N')
@@ -34,12 +35,15 @@ public:
                 getDir(dir,S[i]);
             else
             {
+                // changing coordinates according to direction
                 if(dir=='W') x--;
                 else if(dir=='E') x++;
                 else if(dir=='N') y++;
                 else y--;
             }
         }
+        // after following all the instruction if the direction of robot remains in north and robot is not at its initial position then will be no such circle.
+    
         if(dir!='N' or (x==0 and y==0))
         {
             return true;
